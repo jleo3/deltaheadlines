@@ -1,0 +1,15 @@
+<h1><p><%= @hashlio.company.capitalize %></p></h1>
+
+<h4>Headlines</h4>
+<ul>
+<li>
+  <% TWITTER_CLIENT.search(@hashlio.ticker, :count => 10).each do |status| %>
+  <%= "#{status.text}" %></hr >
+  </li>
+<% end %>
+
+<h4>Yahoo Finance</h4>
+<li><%= posting %>
+
+
+<p><%= link_to "Back", hashlios_path %></p>

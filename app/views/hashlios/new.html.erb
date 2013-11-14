@@ -1,0 +1,14 @@
+<h1>Add a new Ticker</h1>
+
+<%= form_for @hashlio do |f| %>
+	<p>
+	<%= f.label :ticker %><br />
+	<%= f.text_field :ticker %>
+</p>
+<p>
+	<%= f.label :company %><br />
+	<%= f.text_field :company %>
+</p>
+<p>
+	<%= f.submit "Submit" %>
+	<% end %>

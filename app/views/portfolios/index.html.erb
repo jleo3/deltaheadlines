@@ -1,0 +1,15 @@
+<% if signed_in? %>
+Signed in as <%= current_user.email %>
+<%= link_to "sign out", destroy_user_session_path, method: "delete" %>
+<% else %>
+<%= link_to "sign in", new_user_session_path %>
+<% end %>
+
+<h2><b>Welcome to my portfolio<b></h2>
+<%= @portfolios.each do |portfolio| %>
+<h3>Name</h3>
+	<%= link_to portfolio.name, "/hashlios" %>
+	<hr/ >
+<% end %>
+
+<p><%= link_to "Add a New Portfolio", new_portfolio_path %></p>

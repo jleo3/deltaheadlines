@@ -1,0 +1,21 @@
+<% if signed_in? %>
+Signed in as <%= current_user.email %>
+<%= link_to "sign out", destroy_user_session_path, method: "delete" %>
+<% else %>
+<%= link_to "sign in", new_user_session_path %>
+<% end %>
+
+
+<h2><b>Welcome to my Cashtags<b></h2>
+<%= @hashlios.each do |hashlio| %>
+	<h3>Ticker</h3>
+	<%= link_to hashlio.ticker, hashlio %>
+	<h3>Company</h3>
+	<p><%= hashlio.company.capitalize %></p>
+	<%= link_to "Edit", edit_hashlio_path(hashlio) %>
+	<%= link_to "Delete", hashlio, :method => "delete" %>
+	<hr />
+	<% end %>
+
+<p><%= link_to "Add a New Ticker", new_hashlio_path %></p>
+	<p><%= link_to "Back", "/portfolios" %></p>

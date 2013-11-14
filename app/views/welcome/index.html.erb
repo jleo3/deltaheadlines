@@ -1,0 +1,10 @@
+<% if signed_in? %>
+Signed in as <%= current_user.email %>
+<%= link_to "sign out", destroy_user_session_path, method: "delete" %>
+<% else %>
+<%= link_to "sign in", new_user_session_path %>
+<% end %>
+
+<h2><b>Welcome to my portfolio<b></h2>
+
+<p><%= link_to "Get Started", portfolios_path %></p>
