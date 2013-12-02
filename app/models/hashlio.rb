@@ -4,6 +4,7 @@ class Hashlio < ActiveRecord::Base
 	
 	validates_presence_of :ticker
 
+  # nice use of the before_save hook, and a nice, easy-to-read `add_http` method
 	before_save :add_http
 
 	def add_http

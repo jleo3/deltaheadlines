@@ -3,5 +3,6 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-has_many :portfolio
+  # When done correctly, the predicate to `has_many` should be "portfolios," plural
+  has_many :portfolio
 end

@@ -1,0 +1,13 @@
+- Priority #1 should be to get this project onto Heroku. In my experience, it doesn't start to "feel real" until deployment happens. Then you can show people, get feedback, and iterate.
+
+- After that, you'll want a better way to display your data. Once I add a name to my portfolio, I see an array and a Portfolio object on the screen:
+
+[#<Portfolio id: 1, name: "TWC", created_at: "2013-12-02 23:49:45", updated_at: "2013-12-02 23:49:45">]
+
+Obviously, this is not what the user should see. But it's very easy to go from this to something nicely formatted. Take a look at some of the projects that we completed in weeks 5 through 8.
+
+- You'll need to work on getting your Twitter API integration working. I get a "Twitter::Error::Forbidden in Hashlios#show" after I create a Ticker (AAPL) and then click on its link.
+
+- Nice work on getting Devise running smoothly.
+
+- You have the start of an interesting app here, Wilson. I hope you continue working on it and keep me updated on your progress!
